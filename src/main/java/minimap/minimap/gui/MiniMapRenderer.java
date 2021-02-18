@@ -23,8 +23,8 @@ import org.lwjgl.opengl.GL11;
 
 
 public class MiniMapRenderer {
-  private static final ResourceLocation MAP_BORDER = new ResourceLocation("flopsminimap", "border.png");
-  private static final ResourceLocation MAP_BORDER = new ResourceLocation("flopsminimap", "playermarker.png.png");
+  private static final ResourceLocation MAP_BORDER = new ResourceLocation("andrewsminimap", "border.png");
+  private static final ResourceLocation PLAYER_MARKER = new ResourceLocation("andrewsminimap", "playermarker.png");
 
   private byte[] miniMapColors = new byte[16384];
 
