@@ -34,11 +34,11 @@ public class MiniMapRenderer {
 
   public MiniMapRenderer() {
     miniMapTexture = new DynamicTexture(128, 128);
-    for (int i = 0; < miniMapTexture.getTextureData().length ++i;)
+
+    for (int i = 0; i < miniMapTexture.getTextureData().length; ++i)
     {
       miniMapTexture.getTextureData()[i] = 0;
     }
-
   }
 
   public void renderMiniMap(int x, int y, int radius) {
@@ -48,7 +48,7 @@ public class MiniMapRenderer {
     GlStateManager.color(1,1,1);
 
     mc.getTextureManager().bindTexture(MAP_BORDER);
-    drawCircle(x, y, radius, 3, 0);
+    drawCircle(x, y, radius + 3, 0);
 
     mc.getTextureManager().bindTexture(mc.getTextureManager().getDynamicTextureLocation("minimap", miniMapTexture));
     drawCircle(x, y, radius, 180 - rotationYaw);
@@ -64,7 +64,7 @@ public class MiniMapRenderer {
   private void drawDirections(int x, int y, float radius, float rotation) {
     String[] directions = new String[]{"N", "E", "S", "W"};
 
-    for(int i= 0; i < 4, i++) {
+    for(int i = 0; i < 4; i++) {
       int xPos = (int) (MathHelper.cos((float) Math.toRadians(rotation + (i * 90))) * radius);
       int yPos = (int) (MathHelper.sin((float) Math.toRadians(rotation + (i * 90))) * radius);
 
@@ -137,7 +137,7 @@ public class MiniMapRenderer {
 
                d1 = 100.0D;
              } else {
-               BlockPos.MutableBlockPos blockPos$mutableblockpos = new BlockPos.MutableBlockPos();
+               BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
 
                for (int i4 = 0; i4 < i; ++i4) {
                  for (int j4 = 0; j4 < i; ++j4) {

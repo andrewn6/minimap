@@ -13,8 +13,8 @@ public class MinimapListener {
   private Minecraft mc = Minecraft.getMinecraft();
   private MiniMapRenderer miniMapRenderer;
 
-  public MiniMapListener() {
-    miniMapRenderer = MiniMap.getInstance();.getMiniMapRenderer();
+  public void MiniMapListener() {
+    miniMapRenderer = MiniMap.getInstance().getMiniMapRenderer();
   }
 
   @SubscribeEvent
@@ -28,9 +28,9 @@ public class MinimapListener {
 
   @SubscribeEvent
   public void onRenderOverlay(RenderGameOverlayEvent.Post event) {
-    if (event.type != RenderGameOverlayEvent.Post event) return;
+    if (event.type != RenderGameOverlayEvent.ElementType.ALL) return;
 
-    if (mc.currentScreen == null || mc.ingameGUI().getChatOpen()) {
+    if (mc.currentScreen == null || mc.ingameGUI.getChatGUI().getChatOpen()) {
       ScaledResolution scaledResolution = new ScaledResolution(mc);
       int screenWidth =  scaledResolution.getScaledWidth(), hudSpacing = 5, miniMapSize = 45;
 
