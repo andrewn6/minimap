@@ -1,6 +1,6 @@
 package minimap.minimap.listener;
 
-import minimap.minimap.Minimap;
+import minimap.minimap.MiniMapMod;
 import minimap.minimap.gui.MiniMapRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
